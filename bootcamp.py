@@ -180,6 +180,6 @@ def main():
     cc_pass = input("Şifre: ")
 
     save_order(name,tc_no,credit_card_no,cc_pass,sauce.get_description(),sauce.get_cost())
-    print(sauce.get_description()+" siparişiniz toplam "+sauce.get_cost()+" ₺ tutmuştur. Afiyet olsun...")
+    print(sauce.get_description()+" siparişiniz toplam "+str(sauce.get_cost())+" ₺ tutmuştur. Afiyet olsun...")
 
 main()
