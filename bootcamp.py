@@ -132,7 +132,7 @@ class Corn(Decorator):
         self._description = CORN_DESC
         self._cost = CORN_PRICE
 
-# Kullanıcının bilgilerini isteyen ve veritabanına yazan fonksiyon
+# Kullanıcının bilgilerini alıp veritabanına yazan fonksiyon
 def save_order(name, id_number, credit_card_number, credit_card_pass, order_description, total_price):
     with open('Orders_Database.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
@@ -180,5 +180,6 @@ def main():
     cc_pass = input("Şifre: ")
 
     save_order(name,tc_no,credit_card_no,cc_pass,sauce.get_description(),sauce.get_cost())
+    print(sauce.get_description()+" siparişiniz toplam "+sauce.get_cost()+" ₺ tutmuştur. Afiyet olsun...")
 
 main()
